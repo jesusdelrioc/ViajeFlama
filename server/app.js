@@ -18,7 +18,7 @@ const dotenv = require('dotenv').load();
 
 const app = express();
 
-mongoose.connect(process.env.MONGODB_URI)
+mongoose.connect(dbURL)
         .then(()=> console.log("Connected to DB"))
         .catch(e => console.error(e));
 
