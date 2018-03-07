@@ -1,0 +1,16 @@
+.day{
+    display: inline-block;
+    margin:1%;
+    padding: 20px;
+    border: 1px solid grey;
+    border-radius: 15px;
+}
+form{
+    text-align: center;
+}
+input{
+    border: 1px solid black;
+    border-radius: 5px;
+    height: 33px;  
+}
+

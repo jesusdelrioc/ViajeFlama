@@ -1,0 +1,27 @@
+section#slider{
+    background: url("https://kdeotero.files.wordpress.com/2015/05/fondos-pantalla-paisajes-hermosos-bonitos-naturales-escritorio-fotografias-hd-wallpaper-imagenes-fotos-3d-tailandia-playas-bonito-viajar-1.jpg") center center no-repeat;
+    background-size: cover;
+    position: relative;
+    height: 100vh;
+}
+
+section#slider div #cont-banner{
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    transform: translate(-10%,-30%);
+}
+h1{
+    color: white;
+}
+a{
+    color: white;
+   
+}
+h3{
+    border: 1px solid white;
+    border-radius: 10px;
+    text-align: center;
+    width: 40%;
+    padding: 1%;
+}

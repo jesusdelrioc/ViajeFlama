@@ -1,0 +1,27 @@
+<nav>
+    <a [routerLink]="['/varios']"> 5 Dias siguientes</a>
+    <a [routerLink]="['/perfil']"> Perfil</a>
+</nav>
+<br>
+<br>
+
+    <div id="centro">
+    <form (ngSubmit)="onSubmit(form)" #form="ngForm">
+        <div class="busqueda">
+            <input type="text"  ngModel name="city" placeholder="Nombre de la ciudad">
+            <button class="btn btn-default" name="button">buscar</button>
+        </div>
+     </form>
+    <div>
+        <h2>Ciudad:{{myWeather.cityName}}</h2>
+        <h2>Temperatura: {{myWeather.temp}}º C</h2>
+        <div>
+            <img src="http://openweathermap.org/img/w/{{myWeather.icon}}.png">
+        </div>
+        <!-- <h3> Cielo:{{myWeather.weatherKind}}</h3> -->
+        <h3>Temperatura maxima:{{myWeather.tempMax}}ºC</h3>
+        <h3>Temperatura minima:{{myWeather.tempMin}}ºC</h3>
+
+       
+    </div>
+</div>
