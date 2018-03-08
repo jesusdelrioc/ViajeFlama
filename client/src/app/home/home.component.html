@@ -1,17 +1,27 @@
+<section id="slider" class="container-fluid">
+<div class="titulo">
+    <h1>E A S Y T R A V E L</h1>
+</div>
+<br>
+<br>
 <nav>
-    <a [routerLink]="['/varios']"> 5 Dias siguientes</a>
-    <a [routerLink]="['/perfil']"> Perfil</a>
+    <a [routerLink]="['/home']"> TIEMPO</a>
+    <a [routerLink]="['/perfil']"> PERFIL</a>
+    <a [routerLink]=""> MALETA</a>
+    <a [routerLink]=""> CONTACTO</a>
 </nav>
-<br>
-<br>
 
-    <div id="centro">
+<br>
+<br>
+<br>
+<br>
+<div id="centro">
     <form (ngSubmit)="onSubmit(form)" #form="ngForm">
         <div class="busqueda">
-            <input type="text"  ngModel name="city" placeholder="Nombre de la ciudad">
+            <input type="text" ngModel name="city" placeholder="Ciudad">
             <button class="btn btn-default" name="button">buscar</button>
         </div>
-     </form>
+    </form>
     <div>
         <h2>Ciudad:{{myWeather.cityName}}</h2>
         <h2>Temperatura: {{myWeather.temp}}º C</h2>
@@ -22,6 +32,7 @@
         <h3>Temperatura maxima:{{myWeather.tempMax}}ºC</h3>
         <h3>Temperatura minima:{{myWeather.tempMin}}ºC</h3>
 
-       
+
     </div>
 </div>
+</section>

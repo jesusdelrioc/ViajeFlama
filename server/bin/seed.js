@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-const Product = require('../models/Product');
+const lista = require('../models/List');
 const Users = require('../models/User');
 const dbName = 'viajefacils';
 
@@ -9,7 +9,7 @@ mongoose.connect(`mongodb://localhost/${dbName}`)
 
 mongoose.Promise = Promise;
 
-const productos = [
+const lista = [
     {
         name: "Camiseta corta",
         temperature: 24,
@@ -40,10 +40,10 @@ const users =
     }
   
 
-Product.collection.drop();
+List.collection.drop();
 Users.collection.drop();
 
-Promise.all([Users.create(users),Product.create(productos)])
+Promise.all([Users.create(users),List.create(listas)])
     .then(array=>{
         console.log('Seeds Created!');
         mongoose.connection.close();

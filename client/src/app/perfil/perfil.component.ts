@@ -13,8 +13,9 @@ export class PerfilComponent implements OnInit {
   constructor(public userService:UserService) { 
     this.userService.getUserInfo()
     .subscribe(user => this.user = user)
+    console.log(userService)
   }
-
+ 
   ngOnInit() {
   }
 

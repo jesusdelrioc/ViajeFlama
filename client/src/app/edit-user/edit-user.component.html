@@ -1,16 +1,29 @@
-<p>
-  edit profile!
-  <a [routerLink]="['/perfil']"> Perfil</a>
-</p>
- {{user._id}}
-
+<div class="titulo">
+  <h1>E A S Y T R A V E L</h1>
+</div>
+<br>
+<br>
+<nav>
+  <a [routerLink]="['/home']"> TIEMPO</a>
+  <a [routerLink]="['/perfil']"> PERFIL</a>
+  <a [routerLink]=""> MALETA</a>
+  <a [routerLink]=""> CONTACTO</a>
+  <a [routerLink]=""> LOGOUT</a>
+</nav>
+<br>
+<br>
+<br>
 <form (ngSubmit)="submitForm(user._id, edituser)" #edituser="ngForm">
-    <label> Ticker Name </label>
-    <input type="text" #edituserusername="ngModel" [(ngModel)]="user.username" name="username">
+  <label> Ticker Name </label>
+  <input type="text" #editusername="ngModel" [(ngModel)]="user.username" name="username">
+  <label> Email </label>
+  <input type="text" #editemail="ngModel" [(ngModel)]="user.email" name="email">
+  <br>
+  <br>
+  <br>
+  <button class="btn btn-primary" type="submit">Save</button>
 
-    <button class="btn btn-primary" type="submit">Save</button>
-
-  </form>
+</form>
 
 <!-- <div class="container">
     <h1>Edit Profile</h1>

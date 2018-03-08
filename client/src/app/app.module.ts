@@ -14,8 +14,9 @@ import { routes } from "./routes";
 import { PerfilComponent } from './perfil/perfil.component';
 import { InicioComponent } from './inicio/inicio.component';
 import { WeatherService } from '../services/weather.service';
-import { ForecastComponent } from './forecast/forecast.component';
 import { EditUserComponent } from './edit-user/edit-user.component';
+import { ForecastComponent } from './forecasts/forecast.component';
+import { listService } from '../services/list.service';
 
 
 
@@ -29,8 +30,8 @@ import { EditUserComponent } from './edit-user/edit-user.component';
     HomeComponent,
     PerfilComponent,
     InicioComponent,
-  ForecastComponent,
-  EditUserComponent
+ForecastComponent,
+EditUserComponent
 
 
   ],
@@ -42,7 +43,7 @@ import { EditUserComponent } from './edit-user/edit-user.component';
     ReactiveFormsModule
 
   ],
-  providers: [SessionService, UserService, WeatherService],
+  providers: [SessionService, UserService, WeatherService, listService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

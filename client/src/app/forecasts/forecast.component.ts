@@ -3,6 +3,8 @@ import { FormGroup, FormControl } from '@angular/forms';
 import { Forecast } from '../forecast'
 import { WeatherService } from '../../services/weather.service';
 import 'rxjs/Rx';
+import { listService } from '../../services/list.service';
+import { SessionService } from '../../services/session.service';
 
 
 @Component({
@@ -11,8 +13,15 @@ import 'rxjs/Rx';
   styleUrls: ['./forecast.component.css']
 })
 export class ForecastComponent implements OnInit {
+  list
+  product
+  error: string;
 
-  constructor(private weatherService: WeatherService) { }
+  constructor( public session: SessionService,private weatherService: WeatherService, public ListService:listService ) {
+    this.ListService.getListInfo()
+    .subscribe(list => this.list = list)
+    console.log(listService)
+   }
 
   forecastForm: FormGroup;
   cityForecast: Forecast[] = [];
@@ -24,7 +33,7 @@ export class ForecastComponent implements OnInit {
   }
   onSubmit() {
     this.weatherService.fiveDayForecast(this.forecastForm.value.forecastCity).subscribe((data) => {
-        console.log(data)
+        console.log("data")
         for (let i = 0; i<data.list.length; i+=8) {
           const temporary = new Forecast(data.list[i].dt_txt,
             data.list[i].weather[0].icon,
@@ -32,9 +41,12 @@ export class ForecastComponent implements OnInit {
             data.list[i].main.temp_min)
             this.cityForecast.push(temporary);
         }
-        console.log(this.cityForecast);
       }
     );
   }
-
+  logout() {
+    this.session.logout()
+      .catch(e => this.error = e)
+      .subscribe();
+  }
 }

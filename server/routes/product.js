@@ -35,4 +35,3 @@ newproductos.save()
 
 
 module.exports = router;
-

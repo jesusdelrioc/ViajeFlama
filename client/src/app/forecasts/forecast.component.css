@@ -1,3 +1,18 @@
+.day{
+    display: inline-block;
+    margin:1%;
+    padding: 20px;
+    border: 1px solid grey;
+    border-radius: 15px;
+}
+form{
+    text-align: center;
+}
+input{
+    border: 1px solid black;
+    border-radius: 5px;
+    height: 33px;  
+}
 .busqueda{
     margin: 1%;
 }
@@ -32,4 +47,15 @@ section#slider{
     background-size: cover;
     position: relative;
     height: 100vh;
+}
+.botones{
+    background: rgba(255, 255, 255, 0.425)
+}
+button{
+    border: 1px solid black;
+}
+.day{
+    border: 1px solid black;
+    background: rgba(0, 0, 0, 0.555);
+    color:white;
 }
