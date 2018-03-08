@@ -1,41 +1,94 @@
 <section id="slider" class="container-fluid">
-<div class="titulo">
+  <div class="titulo">
     <h1>E A S Y T R A V E L</h1>
-</div>
-<br>
-<br>
-<nav>
-    <a [routerLink]="['/home']">  TIEMPO</a>
+  </div>
+  <br>
+  <br>
+  <nav>
+    <a  class= [routerLink]="['/home']"> TIEMPO</a>
     <a [routerLink]="['/perfil']"> PERFIL</a>
     <a [routerLink]=""> MALETA</a>
-    <a [routerLink]=""> CONTACTO</a>
+    <a [routerLink]="['/contacto']"> CONTACTO</a>
     <a [routerLink]=""> LOGOUT</a>
-    
-</nav>
-<br>
-<br>
-<br>
-<br>
-<form [formGroup]="forecastForm" (ngSubmit)="onSubmit()">
-  <input  class="botones" type="text" formControlName="forecastCity" placeholder="Ciudad">
-  <button  class="btn botones btn-default"> Buscar</button>
-</form>
-<div class="container">
-  <div class="day" *ngFor="let day of cityForecast">
-    <h2>{{day.day}}</h2>
-    <div class="icon">
-      <img src="http://openweathermap.org/img/w/{{day.icon}}.png" alt="">
+      <div *ngIf="session.getUser()">
+        <button class="btn btn-default" (click)="logout()" routerLink=""> Logout </button>
+      </div>
+  </nav>
+  <br>
+  <br>
+  <br>
+  <br>
+  <form [formGroup]="forecastForm" (ngSubmit)="onSubmit()">
+    <input class="botones" type="text" formControlName="forecastCity" placeholder="Ciudad">
+    <button class="btn botones btn-default"> Buscar</button>
+  </form>
+  <div class="container">
+    <div class="day" *ngFor="let day of cityForecast">
+      <h2>{{day.day}}</h2>
+      <div class="icon">
+        <img src="http://openweathermap.org/img/w/{{day.icon}}.png" alt="">
+      </div>
+      <div class="temp">
+        <h4>Maxima {{day.tempMax}}ºC</h4>
+        <h4>Minima {{day.tempMin}}ºC</h4>
+      </div>
     </div>
-    <div class="temp">
-      <h4>Maxima {{day.tempMax}}ºC</h4>
-      <h4>Minima {{day.tempMin}}ºC</h4>
+  </div>
+  <!-- <h5 class="lista">
+    <div *ngFor="let item of list">
+      {{item.name}}
     </div>
-   </div>
-   <h1>
-      {{product?.name}}
-      {{product.name}}
-      {{list.name}}
-      {{list?.name}}
-    </h1>
+
+  </h5> -->
+  <div *ngIf="this.valorMax < 21">
+       Abrigo
+  </div>
+  <div *ngIf="this.valorMax > 21">
+      Camiseta corta
+ </div>
+ <div *ngIf="this.valorMax < 21">
+   Paragüas
+</div>
+<div *ngIf="this.valorMax > 24">
+    Bermudas
+</div>
+<div *ngIf="this.valorMax < 21">
+    Abrigo
+</div>
+<div *ngIf="this.valorMax < 21">
+    Abrigo
+</div>
+<div *ngIf="this.valorMax < 21">
+    Abrigo
+</div>
+<div *ngIf="this.valorMax < 21">
+    Abrigo
+</div>
+<div *ngIf="this.valorMax < 21">
+    Abrigo
+</div>
+<div *ngIf="this.valorMax < 21">
+    Abrigo
+</div>
+<div *ngIf="this.valorMax < 21">
+    Abrigo
+</div>
+<div *ngIf="this.valorMax < 21">
+    Abrigo
+</div>
+<div *ngIf="this.valorMax < 21">
+    Abrigo
+</div>
+<div *ngIf="this.valorMax < 21">
+    Abrigo
+</div>
+<div *ngIf="this.valorMax < 21">
+    Abrigo
+</div>
+<div *ngIf="this.valorMax < 21">
+    Abrigo
+</div>
+<div *ngIf="this.valorMax < 21">
+    Abrigo
 </div>
 </section>

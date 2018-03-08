@@ -7,6 +7,7 @@ import { InicioComponent } from './inicio/inicio.component';
 
 import { EditUserComponent } from './edit-user/edit-user.component';
 import { ForecastComponent } from './forecasts/forecast.component';
+import { ContactComponent } from './contact/contact.component';
     
 export const routes: Routes = [
     { path: '**', redirectTo: 'inicio', pathMatch: 'full' },
@@ -16,6 +17,8 @@ export const routes: Routes = [
     { path: 'home',  component: ForecastComponent , pathMatch: 'full' },
     { path: 'perfil',  component: PerfilComponent , pathMatch: 'full' },
     { path: 'edit/:id',  component: EditUserComponent , pathMatch: 'full' },
+    { path: 'contacto',  component: ContactComponent , pathMatch: 'full' },
+
 
 
   ];

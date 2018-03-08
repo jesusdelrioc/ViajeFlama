@@ -1,16 +1,33 @@
 <section id="slider" class="container-fluid">
   <div class="titulo">
-      <h1>E A S Y T R A V E L</h1>
+    <h1>E A S Y T R A V E L</h1>
   </div>
   <br>
   <br>
   <nav>
-      <a  class="link"  [routerLink]="['/home']">  TIEMPO</a>
-      <a  class="link" [routerLink]="['/perfil']"> PERFIL</a>
-      <a  class="link" [routerLink]=""> MALETA</a>
-      <a  class="link" [routerLink]=""> CONTACTO</a>
-      <a  class="link" [routerLink]=""> LOGOUT</a>
-  </nav>
+    <a class="link" [routerLink]="['/home']"> TIEMPO</a>
+    <a class="link" [routerLink]="['/perfil']"> PERFIL</a>
+    <a class="link" [routerLink]=""> MALETA</a>
+    <a class="link" [routerLink]="['/contacto']"> CONTACTO</a>
+    <a class="link" [routerLink]=""> LOGOUT</a>
+    </nav>
+   
+<aside class="profile-card">
+
+      <header>
+        <a>
+          <img src="{{user?.imgUrl}}" />
+        </a>
+        <h1>{{user?.username}}</h1>
+        <h2>{{user?.name}}</h2>
+      </header>
+      <div class="profile-bio">
+        <p> {{user?.descripcion}}</p>
+      </div>
+      <a class="le" [routerLink]="['/edit/',user?._id]">Editar perfil</a>
+    </aside>
+
+        <!-- </nav>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <br>
 <br>
@@ -29,6 +46,4 @@
 
   <a class="le" [routerLink]="['/edit/',user?._id]">Editar perfil</a>
 </div>
-
-
-
+ -->

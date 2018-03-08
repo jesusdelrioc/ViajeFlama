@@ -22,7 +22,10 @@ export class listService {
     constructor(private http: Http) { }
 
     public list: list;
-
+    
+    getList(){
+        return this.list;
+      }
     handleError(e) {
         console.log(e);
         return Observable.throw(e.json().message);

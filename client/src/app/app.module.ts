@@ -17,6 +17,7 @@ import { WeatherService } from '../services/weather.service';
 import { EditUserComponent } from './edit-user/edit-user.component';
 import { ForecastComponent } from './forecasts/forecast.component';
 import { listService } from '../services/list.service';
+import { ContactComponent } from './contact/contact.component';
 
 
 
@@ -30,8 +31,9 @@ import { listService } from '../services/list.service';
     HomeComponent,
     PerfilComponent,
     InicioComponent,
-ForecastComponent,
-EditUserComponent
+    ForecastComponent,
+    EditUserComponent,
+    ContactComponent
 
 
   ],

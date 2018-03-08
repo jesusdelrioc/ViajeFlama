@@ -14,13 +14,17 @@ import { SessionService } from '../../services/session.service';
 })
 export class ForecastComponent implements OnInit {
   list
-  product
   error: string;
+  //Creamos variable para pasarlo al HTML para hacer un *ngIf
+  valorMax: number;
+
 
   constructor( public session: SessionService,private weatherService: WeatherService, public ListService:listService ) {
     this.ListService.getListInfo()
-    .subscribe(list => this.list = list)
-    console.log(listService)
+    .subscribe(list =>{
+      console.log(list)
+       this.list = list})
+    
    }
 
   forecastForm: FormGroup;
@@ -41,6 +45,8 @@ export class ForecastComponent implements OnInit {
             data.list[i].main.temp_min)
             this.cityForecast.push(temporary);
         }
+        //Le doy valor al valorMax de la API
+          this.valorMax = data.list[0].main.temp_max;
       }
     );
   }
@@ -49,4 +55,6 @@ export class ForecastComponent implements OnInit {
       .catch(e => this.error = e)
       .subscribe();
   }
+
+
 }
