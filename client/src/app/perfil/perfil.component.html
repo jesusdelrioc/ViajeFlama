@@ -1,49 +1,32 @@
 <section id="slider" class="container-fluid">
   <div class="titulo">
-    <h1>E A S Y T R A V E L</h1>
+      <h1> <a class="negro" [routerLink]="['/home']"> E A S Y T R A V E L</a></h1>
   </div>
   <br>
   <br>
   <nav>
-    <a class="link" [routerLink]="['/home']"> TIEMPO</a>
-    <a class="link" [routerLink]="['/perfil']"> PERFIL</a>
-    <a class="link" [routerLink]=""> MALETA</a>
-    <a class="link" [routerLink]="['/contacto']"> CONTACTO</a>
-    <a class="link" [routerLink]=""> LOGOUT</a>
-    </nav>
-   
-<aside class="profile-card">
+    <a class="link" [routerLink]="['/home']"> <strong>TIEMPO</strong> </a>
+    <a class="linke" [routerLink]="['/perfil']"><strong>PERFIL</strong>  </a>
+    <a class="link" [routerLink]=""><strong>MALETA</strong> </a>
+    <a class="link" [routerLink]="['/contacto']"><strong>CONTACTO</strong>  </a>
+    <a class="link" [routerLink]=""> <strong>LOGOUT</strong> </a>
+  </nav>
 
-      <header>
-        <a>
-          <img src="{{user?.imgUrl}}" />
-        </a>
-        <h1>{{user?.username}}</h1>
-        <h2>{{user?.name}}</h2>
-      </header>
-      <div class="profile-bio">
-        <p> {{user?.descripcion}}</p>
-      </div>
+  <aside class="profile-card">
+
+    <header>
+      <a>
+        <img src="{{user?.imgUrl}}" />
+      </a>
+      <h1>{{user?.username}}</h1>
+      <h2>{{user?.name}}</h2>
+    </header>
+    <div class="profile-bio">
+      <p> {{user?.descripcion}}</p>
+    </div>
+    <div class="ll">
       <a class="le" [routerLink]="['/edit/',user?._id]">Editar perfil</a>
-    </aside>
+    </div>
+  </aside>
 
-        <!-- </nav>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<div class="card">
-  <img src="{{user?.imgUrl}}" border-radius=10px;  width="100%" alt="John" >
-  <h2>{{user?.username}}</h2>
-  <p class="title">{{user?.name}}</p>
-  <p>{{user?.descripcion}}</p>
-
-  
-  
-
-  <a class="le" [routerLink]="['/edit/',user?._id]">Editar perfil</a>
-</div>
- -->
+</section>

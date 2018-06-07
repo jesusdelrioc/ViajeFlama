@@ -10,7 +10,7 @@ section#slider{
     padding: 10px;
     border: 1px solid black;
     border-radius: 5px;
-    width: 40%;
+    width: 70%;
     text-align: center;
 } 
 .centro{
@@ -21,8 +21,8 @@ section#slider{
 }
 .q{
     text-align: center;
-    padding-left: 38%; 
 }
+
 button{
     text-decoration: black;
 }

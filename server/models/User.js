@@ -6,7 +6,7 @@ const userSchema = new Schema({
   email: String,
   username: String,
   password: String,
-  imgUrl: { type: String, default: "https://placeholdit.imgix.net/~text?txtsize=50&txt=Ironfunding&w=250&h=250" },
+  imgUrl: { type: String, default: "http://www.visit-pontevedra.com/files/imagenes/item_483_53b2ded05736d.jpg" },
   description: String
 }, {
     timestamps: {

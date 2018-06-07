@@ -1,7 +1,7 @@
 .day{
     display: inline-block;
-    margin:1%;
-    padding: 20px;
+    margin:10px;
+    padding: 15px;
     border: 1px solid grey;
     border-radius: 15px;
 }
@@ -11,18 +11,16 @@ form{
 input{
     border: 1px solid black;
     border-radius: 5px;
-    height: 33px;  
-}
-.busqueda{
-    margin: 1%;
-}
-input{
-    width: 20%;
+    height: 33px; 
+     width: 20%;
     border: 1px solid black;
     text-align: center;
     border: 1px solid black;
     border-radius: 5px;
-    height: 33px;  
+    height: 33px;
+}
+.busqueda{
+    margin: 1%;
 }
 #centro{
     text-align: center;
@@ -38,6 +36,9 @@ nav{
   
 }
 a{
+    color: black;
+}
+.botone{
     color:black;
     margin: 5%;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
@@ -56,9 +57,32 @@ button{
 }
 .day{
     border: 1px solid black;
-    background: rgba(0, 0, 0, 0.555);
-    color:white;
+    background:rgba(255, 255, 255, 0.61);
+    color:black;
 }
-/* .lista{
-    color:white;
-} */
+
+.listado{
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.603);
+  
+    border-radius: 5px;
+   color:black;
+}
+.lista{
+    color:black;
+   
+}
+.botones{
+    height: 54px;
+}
+.botoness{
+    color: white;
+    margin: 5%;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.btn-default{
+    height: 50px;
+}
+
+
+

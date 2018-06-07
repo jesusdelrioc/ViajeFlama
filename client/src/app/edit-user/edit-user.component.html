@@ -1,29 +1,35 @@
+<section id="slider" class="container-fluid">
 <div class="titulo">
-  <h1>E A S Y T R A V E L</h1>
+    <h1> <a [routerLink]="['/home']"> E A S Y T R A V E L</a></h1>
 </div>
 <br>
 <br>
 <nav>
-  <a [routerLink]="['/home']"> TIEMPO</a>
-  <a [routerLink]="['/perfil']"> PERFIL</a>
-  <a [routerLink]=""> MALETA</a>
-  <a [routerLink]="['/contacto']"> CONTACTO</a>
-  <a [routerLink]=""> LOGOUT</a>
+  <a  class="botone"[routerLink]="['/home']"><strong>TIEMPO</strong>  </a>
+  <a  class="botone"[routerLink]="['/perfil']"><strong>PERFIL</strong>  </a>
+  <a  class="botone"[routerLink]=""><strong>MALETA</strong>  </a>
+  <a  class="botone"[routerLink]="['/contacto']"> <strong>CONTACTO</strong> </a>
+  <a  class="botone" *ngIf="session.getUser()">
+      <a (click)="logout()" routerLink=""><strong>LOGOUT</strong>   </a>
+  </a>
 </nav>
 <br>
 <br>
 <br>
-<form (ngSubmit)="submitForm(user._id, edituser)" #edituser="ngForm">
+<form  class="pp" (ngSubmit)="submitForm(user._id, edituser)" #edituser="ngForm">
+  <div class="carta col-sm-12">
   <label> Ticker Name </label>
   <input type="text" #editusername="ngModel" [(ngModel)]="user.username" name="username">
+  <br>
+  <br><br><br>
   <label> Email </label>
   <input type="text" #editemail="ngModel" [(ngModel)]="user.email" name="email">
   <br>
   <br>
-  <br>
-  <button class="btn btn-primary" type="submit" routerLink="perfil">Save</button>
-
+  <button class="btn  ll btn-primary" type="submit"  (click)="submitForm(edituser)">Save</button>
+</div>
 </form>
+</section>
 
 <!-- <div class="container">
     <h1>Edit Profile</h1>

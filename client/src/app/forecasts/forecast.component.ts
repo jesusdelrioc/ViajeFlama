@@ -38,12 +38,14 @@ export class ForecastComponent implements OnInit {
   onSubmit() {
     this.weatherService.fiveDayForecast(this.forecastForm.value.forecastCity).subscribe((data) => {
         console.log("data")
+        this.cityForecast = [];
         for (let i = 0; i<data.list.length; i+=8) {
           const temporary = new Forecast(data.list[i].dt_txt,
             data.list[i].weather[0].icon,
             data.list[i].main.temp_max,
             data.list[i].main.temp_min)
             this.cityForecast.push(temporary);
+            
         }
         //Le doy valor al valorMax de la API
           this.valorMax = data.list[0].main.temp_max;

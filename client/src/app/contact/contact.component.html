@@ -1,51 +1,57 @@
-<div class="titulo">
-        <h1>E A S Y T R A V E L</h1>
-      </div>
-      <br>
-      <br>
-      <nav>
-        <a [routerLink]="['/home']"> TIEMPO</a>
-        <a [routerLink]="['/perfil']"> PERFIL</a>
-        <a [routerLink]="['/']"> MALETA</a>
-        <a [routerLink]="['/contacto']"> CONTACTO</a>
-        <a [routerLink]=""> LOGOUT</a>
-      </nav>
-      <br>
-      <br>
-      <br>
-      <h2 class="titulo2">¿TIENES ALGO QUE CONTARNOS? ¡PUES HABLEMOS!</h2>
-      <br>
-      <br>
-      <br>
-    <div class="col-sm-6 mapa">
-        <iframe
-        width="500"
-        height="450"
-        frameborder="0" style="border:0"
-        src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBH14ltm_M6wYoaBp2Rc94iOi8TA-VopmE
-          &q=Ironhack,Madrid+Spain" allowfullscreen>
-      </iframe>    </div>
-      <div class="to">
-    <div class="col-sm-6 centro">
-       <h2>AQUÍ NOS TIENES...</h2>
-       <p>¿Dudas, feedback, comentarios? Estamos deseando escucharte</p>
-       <br>
-       <br>
-       <br>
-       <h4 class="glyphicon glyphicon-map-marker"> LOCALIZACIÓN</h4> 
-       <h5>C/Paseo De La Chopera 14, Oficina IronCook</h5>
-       <br>
-       <br>
-       <br>
-       <h4 class="glyphicon glyphicon-earphone"> TELEFONO</h4>
-       <h5>600096643</h5>
-       <br>
-       <br>
-       <h4 class="glyphicon glyphicon-envelope"> EMAIL</h4>
-       <h5>easytravel@gmail.com</h5>
-      </div>
-    </div>
-      
-      
+<section id="slider" class="container-fluid">
+  <div class="titulo">
+    <h1>
+      <a [routerLink]="['/home']"> E A S Y T R A V E L</a>
+    </h1>
+  </div>
+  <br>
+  <br>
+  <nav>
+    <a class="botone" [routerLink]="['/home']">
+      <strong>TIEMPO</strong>
+    </a>
+    <a class="botone" [routerLink]="['/perfil']">
+      <strong>PERFIL</strong>
+    </a>
+    <a class="botone" [routerLink]="['/']">
+      <strong>MALETA</strong>
+    </a>
+    <a class="botones" [routerLink]="['/contacto']">
+      <strong>CONTACTO</strong>
+    </a>
+    <a class="botone" [routerLink]="">
+      <strong>LOGOUT</strong>
+    </a>
+  </nav>
+  <br>
+  <br>
+  <br>
+  <h2 class="titulo2">¿TIENES ALGO QUE CONTARNOS? ¡PUES HABLEMOS!</h2>
+  <br>
+  <br>
 
-      
+  <div class="col-sm-6 mapa">
+    <iframe width="500" height="400" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBH14ltm_M6wYoaBp2Rc94iOi8TA-VopmE
+          &q=Ironhack,Madrid+Spain" allowfullscreen>
+    </iframe>
+  </div>
+  <div class="to">
+    <div class="col-sm-6 centro">
+      <h2>AQUÍ NOS TIENES...</h2>
+      <p>¿Dudas, feedback, comentarios? Estamos deseando escucharte</p>
+      <br>
+
+      <h4 class="glyphicon glyphicon-map-marker"> LOCALIZACIÓN</h4>
+      <h5>C/Paseo De La Chopera 14, Oficina IronCook</h5>
+
+      <br>
+      <br>
+      <h4 class="glyphicon glyphicon-earphone"> TELEFONO</h4>
+      <h5>600096643</h5>
+
+      <br>
+      <h4 class="glyphicon glyphicon-envelope"> EMAIL</h4>
+      <h5>easytravel@gmail.com</h5>
+    </div>
+  </div>
+</section>

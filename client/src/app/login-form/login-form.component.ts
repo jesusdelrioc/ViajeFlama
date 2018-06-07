@@ -24,10 +24,7 @@ export class LoginFormComponent implements OnInit {
       this.router.navigate(["/home"]);
     }, err => (this.error = err));
   }
-  logout() {
-    this.session.logout()
-      .catch(e => this.error = e)
-      .subscribe();
-  }
+
+  
 
 }

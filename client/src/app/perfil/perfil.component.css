@@ -5,8 +5,12 @@
     text-align: center;
     border-radius:10px; 
 }
-
-
+section#slider{
+    background: url("http://www.activament.org/wp-content/uploads/2017/10/1661878_10153871965811100_3001250314733437901_n.jpg") center center no-repeat;
+    background-size: cover;
+    position: relative;
+    height: 100vh;
+}
 
 img{
     border-radius:10px;
@@ -37,12 +41,27 @@ h1{
     margin: 5%;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
+.linke{
+    color:white;
+    margin: 5%;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
  .title {
     color: grey;
     font-size: 18px;
     
 }
 
+.ll{
+    text-align: center;
+    
+}
+.le{
+    border: 1px solid black;
+    padding: 3px;
+    border-radius: 5px;
+    color:black;
+}
  html {
     height: 100%;
 }
@@ -114,7 +133,7 @@ p {
     display: inline-block;
     float: left;
     border-right: 2px dashed #EEEEEE;
-	background: #FFFFFF;
+	background: rgba(255, 255, 255, 0.438);
     color: #000000;
     margin-top: 50px;
     opacity: 0;
@@ -164,20 +183,20 @@ p {
     -webkit-box-shadow: 0px 0px 0px 12px rgba(0, 0, 0, 0.1);
     box-shadow: 0px 0px 0px 12px rgba(0, 0, 0, 0.1);
 }
-.profile-card .profile-bio {
+/* .profile-card .profile-bio {
     width: 175px;        
     height: 180px;
     display: inline-block;
     float: right;
     padding: 50px 20px 30px 20px;
-	background: #FFFFFF;
+	background: rgba(255, 255, 255, 0.432);
     color: #333333;
     margin-top: 50px;
     text-align: center;
     opacity: 0;
     -webkit-animation: moveIn 1s 3.1s ease forwards;
     animation: moveIn 1s 3.1s ease forwards;
-}
+} */
 .profile-social-links {
     width: 218px;        
     display: inline-block;
@@ -456,7 +475,7 @@ p {
     100% {
         width: 440px;
         height: 280px;
-        background: #FFFFFF;
+        background: rgba(255, 255, 255, 0.589);
         -webkit-border-radius: 4px;
     }
 }
@@ -498,7 +517,7 @@ p {
 	100% {
 		width: 280px;
 		height: 440px;
-		background: #FFFFFF;
+		background: rgba(255, 255, 255, 0.575);
 		border-radius: 4px;
 	}
 }
@@ -559,4 +578,8 @@ p {
     100% {
         opacity: 0;
     }
+}
+
+.negro{
+    color: black;
 }

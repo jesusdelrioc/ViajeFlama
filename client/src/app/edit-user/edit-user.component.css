@@ -6,11 +6,34 @@ nav{
 .titulo{
    text-align: center;
 }
-a{
+.botone{
     color:black;
     margin: 5%;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 form{
     text-align: center;
+}
+a{
+    color:black;
+}
+section#slider{
+    background: url("http://www.activament.org/wp-content/uploads/2017/10/1661878_10153871965811100_3001250314733437901_n.jpg") center center no-repeat;
+    background-size: cover;
+    position: relative;
+    height: 100vh;
+}
+.carta{
+    background: rgba(255, 255, 255, 0.473);
+
+}
+.col-sm-12{
+text-align: center;
+border:1px solid black;
+padding: 2px;
+}
+input{
+    border: 1px solid black;
+    border-radius: 5px;
+    margin: 5px;
 }

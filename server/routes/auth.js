@@ -17,7 +17,7 @@ router.post('/signup', (req, res, next) => {
   if (!username || !password) return res.status(400).json({ message: 'Provide username and password' })
   User.findOne({ username }, '_id')
     .then(foundUser =>{
-      if (foundUser) return res.status(400).json({ message: 'The username already exists' });
+      if (foundUser) return res.status(400).json({ message: 'El usuario ya existe' });
       const salt = bcrypt.genSaltSync(10);
       const hashPass = bcrypt.hashSync(password, salt);
       const theUser = new User({

@@ -25,10 +25,6 @@
         <p *ngIf="error" class="error"> {{ error }} </p>
       </div>
     </div>
-
-    <div *ngIf="session.getUser()">
-      <button class="btn btn-default" (click)="logout()"> Logout </button>
-    </div>
   </div>
 </section>
   

@@ -1,94 +1,91 @@
 <section id="slider" class="container-fluid">
-  <div class="titulo">
-    <h1>E A S Y T R A V E L</h1>
-  </div>
-  <br>
-  <br>
-  <nav>
-    <a  class= [routerLink]="['/home']"> TIEMPO</a>
-    <a [routerLink]="['/perfil']"> PERFIL</a>
-    <a [routerLink]=""> MALETA</a>
-    <a [routerLink]="['/contacto']"> CONTACTO</a>
-    <a [routerLink]=""> LOGOUT</a>
-      <div *ngIf="session.getUser()">
-        <button class="btn btn-default" (click)="logout()" routerLink=""> Logout </button>
-      </div>
-  </nav>
-  <br>
-  <br>
-  <br>
-  <br>
-  <form [formGroup]="forecastForm" (ngSubmit)="onSubmit()">
-    <input class="botones" type="text" formControlName="forecastCity" placeholder="Ciudad">
-    <button class="btn botones btn-default"> Buscar</button>
-  </form>
-  <div class="container">
-    <div class="day" *ngFor="let day of cityForecast">
-      <h2>{{day.day}}</h2>
-      <div class="icon">
-        <img src="http://openweathermap.org/img/w/{{day.icon}}.png" alt="">
-      </div>
-      <div class="temp">
-        <h4>Maxima {{day.tempMax}}ºC</h4>
-        <h4>Minima {{day.tempMin}}ºC</h4>
-      </div>
+    <div class="titulo">
+            <h1> <a [routerLink]="['/home']"> E A S Y T R A V E L</a></h1>
     </div>
-  </div>
-  <!-- <h5 class="lista">
-    <div *ngFor="let item of list">
-      {{item.name}}
-    </div>
+    <br>
+    <br>
+    <nav>
+        <a class="botoness" [routerLink]="['/home']">
+            <strong>TIEMPO</strong>
+        </a>
+        <a class="botone" [routerLink]="['/perfil']">
+            <strong>PERFIL</strong>
+        </a>
+        <a class="botone" [routerLink]="">
+            <strong>MALETA</strong>
+        </a>
+        <a class="botone" [routerLink]="['/contacto']">
+            <strong>CONTACTO</strong>
+        </a>
+        <a class="botone" *ngIf="session.getUser()">
+            <a (click)="logout()" routerLink="">
+                <strong>LOGOUT</strong>
+            </a>
+        </a>
+    </nav>
+    <br>
+    <br>
+    <br>
+    <form [formGroup]="forecastForm" (ngSubmit)="onSubmit()">
+        <h2>
+            <input class="botones" type="text" formControlName="forecastCity" placeholder="Ciudad">
+            <button class="btn botones  btn-default"> Buscar</button>
+        </h2>
+    </form>
+    <div class="container">
+        <div class="day" *ngFor="let day of cityForecast">
+            <h4>{{day.day}}
+                <div>
+                    <img src="http://openweathermap.org/img/w/{{day.icon}}.png" alt="">
+                </div>
 
-  </h5> -->
-  <div *ngIf="this.valorMax < 21">
-       Abrigo
-  </div>
-  <div *ngIf="this.valorMax > 21">
-      Camiseta corta
- </div>
- <div *ngIf="this.valorMax < 21">
-   Paragüas
-</div>
-<div *ngIf="this.valorMax > 24">
-    Bermudas
-</div>
-<div *ngIf="this.valorMax < 21">
-    Abrigo
-</div>
-<div *ngIf="this.valorMax < 21">
-    Abrigo
-</div>
-<div *ngIf="this.valorMax < 21">
-    Abrigo
-</div>
-<div *ngIf="this.valorMax < 21">
-    Abrigo
-</div>
-<div *ngIf="this.valorMax < 21">
-    Abrigo
-</div>
-<div *ngIf="this.valorMax < 21">
-    Abrigo
-</div>
-<div *ngIf="this.valorMax < 21">
-    Abrigo
-</div>
-<div *ngIf="this.valorMax < 21">
-    Abrigo
-</div>
-<div *ngIf="this.valorMax < 21">
-    Abrigo
-</div>
-<div *ngIf="this.valorMax < 21">
-    Abrigo
-</div>
-<div *ngIf="this.valorMax < 21">
-    Abrigo
-</div>
-<div *ngIf="this.valorMax < 21">
-    Abrigo
-</div>
-<div *ngIf="this.valorMax < 21">
-    Abrigo
-</div>
+            </h4>
+            <div class="temp">
+                <h5>Maxima {{day.tempMax}}ºC</h5>
+                <h5>Minima {{day.tempMin}}ºC</h5>
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+    <div class="cento">
+        <div class="listado">
+            <div class="lista" *ngIf="this.valorMax < 21">
+                Abrigo
+            </div>
+            <div class="lista" *ngIf="this.valorMax > 21">
+                Camiseta Manga Corta
+            </div>
+            <div class="lista" *ngIf="this.valorMax < 19">
+                Paraguas
+            </div>
+            <div class="lista" *ngIf="this.valorMax > 24">
+                Bermudas
+            </div>
+            <div class="lista" *ngIf="this.valorMax < 21">
+                Chaqueta
+            </div>
+            <div class="lista" *ngIf="this.valorMax > 25">
+                Bañador
+            </div>
+            <div class="lista" *ngIf="this.valorMax < 21">
+                jersey
+            </div>
+            <div class="lista" *ngIf="this.valorMax > 21">
+                Chanclas
+            </div>
+            <div class="lista" *ngIf="this.valorMax > 0">
+                Ropa Interior
+            </div>
+            <div class="lista" *ngIf="this.valorMax > -12">
+                Documento de Identidad
+            </div>
+            <div class="lista" *ngIf="this.valorMax < 21">
+                Pantalon Largo
+            </div>
+            <div class="lista" *ngIf="this.valorMax > 0">
+                Cepillo de Dientes
+            </div>
+        </div>
+    </div>
 </section>

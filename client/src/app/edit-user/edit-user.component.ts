@@ -43,7 +43,6 @@ submitForm(id, form){
   console.log(id)
    console.log(this.user._id)
   this.userService.editUser(this.user._id, form.value)
-  .catch(e => this.error = e)
-  .subscribe(status => { if(status === 200) this.router.navigate([`/edit/${this.user._id}`]) } )
+  .subscribe(status => this.router.navigate([`/perfil`]) )
 }
 }
